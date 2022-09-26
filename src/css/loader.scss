@@ -1,0 +1,49 @@
+#loadingDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000000000000;
+  background-color: $custom-white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+
+  .loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      margin-top: 16px;
+    }
+    .message {
+      color: $secondary-green;
+    }
+  }
+
+  .loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid $primary-blue;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

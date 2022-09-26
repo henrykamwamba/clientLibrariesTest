@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dest/css/portal.css">
+        <title>Client Libraries</title>
+        <script src="/dest/js/bundle.js"></script>
+        <script>
+            window.onload = function () {
+                setTimeout(() => {
+                    document.body.style.overflow = "unset";
+                    document.getElementById("loadingDiv").style.display = "none";
+                }, 2000);
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="loadingDiv">
+            <div class="loadingContainer">
+                <div class="loader"></div>
+                <div class="message">Please wait...</div>
+            </div>
+        </div>
+
+        <div id="divMessage" class="card-center"></div>
+        <div id="divDates"></div>
+    </body>
+
+    <script>
+        Khusa.Helpers.OutputMessage("divMessage", "Hello World", true);
+        setTimeout(() => {
+            var dates = Khusa.Dates.GetDatesInMonth(2022, 9);
+            var htmlElements = "";
+            dates.forEach(element => {
+                htmlElements += `<div class="card">${element}</div>`;
+            });
+            document.getElementById('divDates').innerHTML = htmlElements;
+        }, 3000);
+    </script>
+
+</html>

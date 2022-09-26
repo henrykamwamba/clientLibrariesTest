@@ -1,0 +1,29 @@
+{
+  "name": "clientlibraries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "portal:css": "gulp portal",
+    "portal:js": "gulp bundleJs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@lopatnov/rollup-plugin-uglify": "^2.1.5",
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "sass": "^1.55.0"
+  }
+}
